@@ -1,0 +1,56 @@
+[16-Nov-2016 12:20:34 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Table 'wp_revslider_sliders' already exists với truy vấn CREATE TABLE wp_revslider_sliders (
+						  id int(9) NOT NULL AUTO_INCREMENT,
+						  title tinytext NOT NULL,
+						  alias tinytext,
+						  params LONGTEXT NOT NULL,
+						  UNIQUE KEY id (id)
+						) yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::createTable, dbDelta
+[16-Nov-2016 12:20:34 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Table 'wp_revslider_slides' already exists với truy vấn CREATE TABLE wp_revslider_slides (
+							  id int(9) NOT NULL AUTO_INCREMENT,
+							  slider_id int(9) NOT NULL,
+							  slide_order int not NULL,
+							  params LONGTEXT NOT NULL,
+							  layers LONGTEXT NOT NULL,
+							  UNIQUE KEY id (id)
+							) yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::createTable, dbDelta
+[16-Nov-2016 12:20:34 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Table 'wp_revslider_static_slides' already exists với truy vấn CREATE TABLE wp_revslider_static_slides (
+							  id int(9) NOT NULL AUTO_INCREMENT,
+							  slider_id int(9) NOT NULL,
+							  params LONGTEXT NOT NULL,
+							  layers LONGTEXT NOT NULL,
+							  UNIQUE KEY id (id)
+							) yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::createTable, dbDelta
+[16-Nov-2016 12:20:34 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Table 'wp_revslider_css' already exists với truy vấn CREATE TABLE wp_revslider_css (
+							  id int(9) NOT NULL AUTO_INCREMENT,
+							  handle TEXT NOT NULL,
+							  settings LONGTEXT,
+							  hover LONGTEXT,
+							  params LONGTEXT NOT NULL,
+							  UNIQUE KEY id (id)
+							) yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::createTable, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Table 'wp_revslider_layer_animations' already exists với truy vấn CREATE TABLE wp_revslider_layer_animations (
+							  id int(9) NOT NULL AUTO_INCREMENT,
+							  handle TEXT NOT NULL,
+							  params TEXT NOT NULL,
+							  UNIQUE KEY id (id)
+							) yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::createTable, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Table 'wp_revslider_navigations' already exists với truy vấn CREATE TABLE wp_revslider_navigations (
+							  id int(9) NOT NULL AUTO_INCREMENT,
+							  name VARCHAR(191) NOT NULL,
+							  handle VARCHAR(191) NOT NULL,
+							  css LONGTEXT NOT NULL,
+							  markup LONGTEXT NOT NULL,
+							  settings LONGTEXT NULL,
+							  UNIQUE KEY id (id)
+							) yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::createTable, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Duplicate column name 'settings' với truy vấn ALTER TABLE wp_revslider_slides ADD COLUMN settings text NOT NULL yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::updateTables, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Duplicate column name 'settings' với truy vấn ALTER TABLE wp_revslider_static_slides ADD COLUMN settings text NOT NULL yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::updateTables, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Duplicate column name 'settings' với truy vấn ALTER TABLE wp_revslider_sliders ADD COLUMN settings text NULL yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::updateTables, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Duplicate column name 'advanced' với truy vấn ALTER TABLE wp_revslider_css ADD COLUMN advanced MEDIUMTEXT yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::updateTables, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Duplicate column name 'settings' với truy vấn ALTER TABLE wp_revslider_layer_animations ADD COLUMN settings text NULL yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::updateTables, dbDelta
+[16-Nov-2016 12:20:35 UTC] Cơ sở dữ liệu của WordPress gặp lỗi Duplicate column name 'type' với truy vấn ALTER TABLE wp_revslider_sliders ADD COLUMN type VARCHAR(191) NOT NULL DEFAULT '' yêu cầu bởi do_action('activate_revslider/revslider.php'), call_user_func_array, RevSliderAdmin->onActivate, RevSliderFront::createDBTables, RevSliderFront::updateTables, dbDelta
+[16-Nov-2016 21:42:20 UTC] WordPress database error Table 'matday5z_demo.wp_tsw_log' doesn't exist for query SHOW COLUMNS FROM wp_tsw_log LIKE 'IS_BOT' made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, traffic_stats_init, wp_tsw_install_db
+[16-Nov-2016 21:42:20 UTC] WordPress database error Table 'matday5z_demo.wp_tsw_log' doesn't exist for query SHOW COLUMNS FROM wp_tsw_log LIKE 'IS_HIT' made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), call_user_func_array, traffic_stats_init, wp_tsw_install_db
+[28-Nov-2016 03:51:12 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/uduhoch84nv/public_html/wp-content/plugins/wp-optimize/wp-optimize-credits.php on line 78
+[28-Nov-2016 05:10:34 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/uduhoch84nv/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3088
+[28-Nov-2016 05:10:34 UTC] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/uduhoch84nv/public_html/wp-content/plugins/wp-super-cache/wp-cache.php on line 3090
